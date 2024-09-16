@@ -64,4 +64,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
 
-This extension is licensed under the [MIT License](LICENSE).
+This extension is licensed under the [MIT License](https://github.com/archways404/qJump/blob/main/LICENSE).
