@@ -21,8 +21,10 @@
 		"keybindings": [
 			{
 				"command": "qjump.hop",
-				"key": "control+option+h",
-				"when": "editorTextFocus"
+				"key": "ctrl+shift+j",
+				"when": "editorTextFocus",
+				"win": "ctrl+shift+j",
+				"mac": "ctrl+shift+j"
 			}
 		]
 	},
