@@ -3,6 +3,7 @@
 	"displayName": "qJump",
 	"description": "A quick way to navigate your code!",
 	"version": "0.0.1",
+	"publisher": "404CompanyNotFoundLLC",
 	"engines": {
 		"vscode": "^1.93.0"
 	},
@@ -30,7 +31,7 @@
 	},
 	"scripts": {
 		"lint": "eslint .",
-		"pretest": "pnpm run lint",
+		"pretest": "npm run lint",
 		"test": "vscode-test"
 	},
 	"devDependencies": {

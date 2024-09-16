@@ -1,65 +1,67 @@
-# qjump README
 
-This is the README for your extension "qjump". After writing up a brief description, we recommend including the following sections.
+# qJump - A Quick Way to Navigate Your Code!
+
+**qJump** is a Visual Studio Code extension that allows you to quickly jump to any label or line number in your code. With qJump, you can navigate large files effortlessly, jumping directly to specific words or line numbers with a simple command.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Jump to Labels:** Automatically generates labels for words within the visible range of the editor, allowing you to quickly jump to them by typing their label.
+- **Jump to Line Number:** Directly jump to any line number by typing it in the input box.
+- **Dynamic Label Generation:** Labels are generated based on the content of the visible range in the editor, allowing quick navigation in large files.
+- **Automatic Update:** Labels are updated when scrolling stops, ensuring you always see the correct labels for the visible content.
+- **Keyboard Shortcut:** Default keybinding is `Ctrl+Shift+J` (Windows and macOS) for easy access to the jump command.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Open a file in the editor.
+2. Press the keyboard shortcut (`Ctrl+Shift+J`).
+3. An input box will appear at the top. You can:
+   - **Type a label**: Enter the label corresponding to the word you want to jump to (e.g., "A", "B", etc.).
+   - **Enter a line number**: Directly jump to a specific line by entering its number.
+4. Press `Enter` to jump to the specified label or line.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension does not contribute any additional settings.
 
-For example:
+## Keybindings
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `Ctrl+Shift+J` (Windows and macOS): Activates the quick jump command.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- The extension currently generates labels only for words in the visible range of the editor. If you scroll or resize the editor, labels will be updated automatically.
+- Limited to generating labels for alphanumeric words (including underscores).
+
+## Requirements
+
+- Visual Studio Code `^1.93.0`
+
+## Installation
+
+1. Download and install the extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+2. Or, manually install using the `.vsix` file:
+   - Download the `.vsix` file.
+   - In Visual Studio Code, go to Extensions > ... > Install from VSIX.
+
+## Development
+
+To work on this extension locally:
+
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Open the directory in Visual Studio Code.
+4. Press `F5` to open a new window with the extension loaded.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
+- Initial release of qJump.
 
-### 1.0.0
+## License
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE).
