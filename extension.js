@@ -66,8 +66,8 @@ function activate(context) {
 			const decorationType = vscode.window.createTextEditorDecorationType({
 				before: {
 					contentText: label.label.toUpperCase(), // Display labels in uppercase
-					color: 'white',
-					backgroundColor: 'rgba(0, 0, 0, 0.6)', // Slightly transparent background
+					color: 'cyan',
+					backgroundColor: 'rgba(0, 0, 0, 0.1)', // Slightly transparent background
 					fontWeight: 'bold',
 					margin: '0 0.2em 0 0', // Small right margin for spacing
 				},
@@ -117,7 +117,7 @@ function activate(context) {
 
 			// Wait for user input
 			const pickedLabel = await vscode.window.showInputBox({
-				placeHolder: 'Type a label to jump to...',
+				placeHolder: 'Type a label or line number to jump to...',
 			});
 			if (!pickedLabel) {
 				// Clean up decorations if input is canceled
@@ -125,7 +125,27 @@ function activate(context) {
 				return;
 			}
 
-			// Find the selected position (convert input to lowercase for comparison)
+			// Check if the input is a line number
+			const lineNumber = parseInt(pickedLabel, 10);
+			if (
+				!isNaN(lineNumber) &&
+				lineNumber > 0 &&
+				lineNumber <= editor.document.lineCount
+			) {
+				// Move the cursor to the specified line number (adjusting for 0-based index)
+				const lineIndex = lineNumber - 1;
+				const newSelection = new vscode.Selection(lineIndex, 0, lineIndex, 0);
+				editor.selection = newSelection;
+				editor.revealRange(
+					new vscode.Range(newSelection.start, newSelection.end)
+				);
+
+				// Clean up decorations
+				decorations.forEach((decoration) => decoration.dispose());
+				return;
+			}
+
+			// If not a line number, proceed with label-based jump
 			const selectedLabel = labels.find(
 				(label) => label.label === pickedLabel.toLowerCase()
 			);
