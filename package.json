@@ -2,7 +2,7 @@
 	"name": "qjump",
 	"displayName": "qJump",
 	"description": "A quick way to navigate your code!",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "404CompanyNotFoundLLC",
 	"repository": {
 		"type": "git",
