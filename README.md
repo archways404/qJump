@@ -1,7 +1,11 @@
 
 # qJump - A Quick Way to Navigate Your Code!
 
+![qJump Logo](images/logo.webp)
+
 **qJump** is a Visual Studio Code extension that allows you to quickly jump to any label or line number in your code. With qJump, you can navigate large files effortlessly, jumping directly to specific words or line numbers with a simple command.
+
+I took inspiration from a well known and loved NeoVim plugin [Hop Neovim](https://github.com/smoka7/hop.nvim) by smoka7, so that is the basis of the plugin!
 
 ## Features
 

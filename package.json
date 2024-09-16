@@ -2,8 +2,12 @@
 	"name": "qjump",
 	"displayName": "qJump",
 	"description": "A quick way to navigate your code!",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "404CompanyNotFoundLLC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/archways404/qJump"
+	},
 	"engines": {
 		"vscode": "^1.93.0"
 	},
@@ -12,11 +16,12 @@
 	],
 	"activationEvents": [],
 	"main": "./extension.js",
+	"icon": "images/icon.webp",
 	"contributes": {
 		"commands": [
 			{
 				"command": "qjump.hop",
-				"title": "Hello World"
+				"title": "qJump: Hop"
 			}
 		],
 		"keybindings": [
